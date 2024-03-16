@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Red Hat Display";
+    box-sizing: border-box;
+}
+
+body {
+    background: #8760bbb0;
+}
+
+.quoteBox {
+    background: linear-gradient(125deg, #ffd7d7a9, #cdffde);
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.30);
+}
+
+.quoteBox h1 {
+    font-family: "Cooper Black";
+    font-size: 45px;
+    color: #333;
+    margin-bottom: 9px;
+}
+
+#logo {
+    font-family: "Cooper Black";
+    color: rgb(175, 70, 0);
+}
+
+.quoteBox h2{
+    font-size: 28px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quoteBox h2::after {
+    content: '';
+    width: 130px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.quoteBox blockquote {
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-size: 26px;
+    min-height: 80px;
+
+}
+
+.quoteBox blockquote::before, .quoteBox blockquote::after{
+    content: '"';
+}
+
+#author {
+    font-family: "Playfair Display";
+    font-style: italic;
+    display: block;
+    margin-top: 5px;
+    float: right;
+    position: relative;
+}
+
+#author::before {
+    content: '';
+    width: 15px;
+    height: 2px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    top: 50%;
+    left: -30%;
+}
+
+/* Add transition property to quote and author */
+.quoteBox blockquote, #author {
+    opacity: 0; /* Hide elements initially */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+.quoteBox div {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.quoteBox button {
+    background: rgb(23, 124, 229);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 25px;
+    border: 3px solid rgb(23, 124, 229);
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.quoteBox button img {
+    width: 35px;
+    margin-right: 10px;
+}
+
+.quoteBox button:nth-child(2) {
+    background: transparent;
+    color: #333;
+}
+
+.quoteBox button:hover {
+    filter: brightness(140%);
+    transform: scale(1.05);
+    font-size: 16px;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
